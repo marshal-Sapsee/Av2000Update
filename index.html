@@ -1,0 +1,391 @@
+<!doctype html>
+<html class="fixed">
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="UTF-8">
+
+    <title>АРМ Энергетика | Автоматизация 2000</title>
+
+    <!-- Web Fonts  -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/datepicker3.css" />
+
+    <!-- Specific Page Vendor CSS -->
+    <link rel="stylesheet" href="assets/vendor/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css" />
+    <link rel="stylesheet" href="assets/vendor/morris/morris.css" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/stylesheets/theme.css" />
+
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="assets/stylesheets/skins/default.css" />
+
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="assets/stylesheets/theme-custom.css">
+
+    <!-- Head Libs -->
+    <script src="assets/vendor/modernizr/modernizr.js"></script>
+</head>
+
+<body>
+    <section class="body">
+
+        <!-- start: header -->
+        <header class="header">
+            <div class="logo-container">
+                <a href="../" class="logo">
+                    <img src="assets/images/logo.png" height="35" alt="Автоматизация 2000" />
+                </a>
+                <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+                    <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                </div>
+            </div>
+
+            <!-- start: search & user box -->
+            <div class="header-right">
+
+                <form action="pages-search-results.html" class="search nav-form">
+                    <div class="input-group input-search">
+                        <input type="text" class="form-control" name="q" id="q" placeholder="Поиск...">
+                        <span class="input-group-btn">
+								<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+							</span>
+                    </div>
+                </form>
+
+                <span class="separator"></span>
+
+                <ul class="notifications">
+                    <li>
+                        <a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
+                            <i class="fa fa-bell"></i>
+                            <span class="badge">3</span>
+                        </a>
+                        <div class="dropdown-menu notification-menu">
+                            <div class="notification-title">
+                                <span class="pull-right label label-default">3</span> Оповещения
+                            </div>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="clearfix">
+                                            <div class="image">
+                                                <i class="fa fa-thumbs-up bg-success"></i>
+                                            </div>
+                                            <span class="title">Соединение с УСПД установлено</span>
+                                            <span class="message">10 минут назад</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="clearfix">
+                                            <div class="image">
+                                                <i class="fa fa-cloud bg-warning"></i>
+                                            </div>
+                                            <span class="title">База данных сохранена</span>
+                                            <span class="message">7 минут назад</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="clearfix">
+                                            <div class="image">
+                                                <i class="fa fa-signal bg-danger"></i>
+                                            </div>
+                                            <span class="title">Соединение потеряно</span>
+                                            <span class="message">3 минуты назад</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <hr />
+
+                                <div class="text-right">
+                                    <a href="#" class="view-more">Просмотреть все</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <span class="separator"></span>
+
+                <div id="userbox" class="userbox">
+                    <a href="#" data-toggle="dropdown">
+                        <figure class="profile-picture">
+                            <img src="assets/images/!logged-user.jpg" alt="Energo" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
+                        </figure>
+                        <div class="profile-info" data-lock-name="Energo" data-lock-email="a2000@info.by">
+                            <span class="name">Energo</span>
+                            <span class="role">администратор</span>
+                        </div>
+
+                        <i class="fa custom-caret"></i>
+                    </a>
+
+                    <div class="dropdown-menu">
+                        <ul class="list-unstyled">
+                            <li class="divider"></li>
+                            <li>
+                                <a role="menuitem" tabindex="-1" href="pages-user-profile.html"><i class="fa fa-user"></i> Профиль</a>
+                            </li>
+                            <li>
+                                <a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i class="fa fa-lock"></i> Экран блокировки</a>
+                            </li>
+                            <li>
+                                <a role="menuitem" tabindex="-1" href="pages-signin.html"><i class="fa fa-power-off"></i> Выйти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end: search & user box -->
+        </header>
+        <!-- end: header -->
+
+        <div class="inner-wrapper">
+            <!-- start: sidebar -->
+            <aside id="sidebar-left" class="sidebar-left">
+
+                <div class="sidebar-header">
+                    <div class="sidebar-title">
+                        Навигация
+                    </div>
+                    <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+                        <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                    </div>
+                </div>
+
+                <div class="nano">
+                    <div class="nano-content">
+                        <nav id="menu" class="nav-main" role="navigation">
+                            <ul class="nav nav-main">
+                                <li class="nav-active">
+                                    <a href="index.html">
+                                        <i class="fa fa-home" aria-hidden="true"></i>
+                                        <span>Рабочий стол</span>
+                                    </a>
+                                </li>
+                                <li class="nav-parent">
+                                    <a>
+                                        <i class="fa fa-table" aria-hidden="true"></i>
+                                        <span>Отчеты</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li>
+                                            <a href="tables-basic.html">
+													 Показания
+												</a>
+                                        </li>
+                                        <li>
+                                            <a href="tables-advanced.html">
+													 Диагностические
+												</a>
+                                        </li>
+                                        <li>
+                                            <a href="tables-responsive.html">
+													 Настройки
+												</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <hr class="separator" />
+                        <hr class="separator" />
+                    </div>
+                </div>
+            </aside>
+            <!-- end: sidebar -->
+
+            <section role="main" class="content-body">
+                <header class="page-header">
+                    <h2>Рабочий стол</h2>
+
+                    <div class="right-wrapper pull-right">
+                        <ol class="breadcrumbs">
+                            <li>
+                                <a href="index.html">
+                                    <i class="fa fa-home"></i>
+                                </a>
+                            </li>
+                            <li><span>Рабочий стол</span></li>
+                        </ol>
+
+                        <a class="sidebar-right-toggle" data-open=""><i class="fa fa-chevron-left"></i></a>
+                    </div>
+                </header>
+
+                <!-- start: page -->
+                <div class="col-md-6 col-lg-12 col-xl-12">
+                    <section class="panel">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-10">
+                                    <div class="chart-data-selector" id="salesSelectorWrapper">
+                                        <h2>
+                                            Показания:
+                                            <strong>
+													<select class="form-control" id="salesSelector">
+														<option value="Nap" selected>Напряжение</option>
+														<option value="Tok" >Ток</option>
+														<option value="Amp" >Мощность</option>
+													</select>
+												</strong>
+                                        </h2>
+
+                                        <div id="salesSelectorItems" class="chart-data-selector-items mt-sm">
+                                            <!-- Flot: Sales Porto Admin -->
+                                            <div class="chart chart-sm" data-sales-rel="Nap" id="flotDashSales1" class="chart-active"></div>
+                                            <script>
+                                            const { Client } = require('pg')
+                                            const client = new Client({
+                                              user: 'administrator',
+                                              host: 'localhost',
+                                              database: 'av2000',
+                                              password: '20002000',
+                                              // port: 3211,
+                                            })
+                                            client.connect()
+                                            client.query('SELECT * FROM l1tag', (err, res) => {
+                                              console.log(err, res)
+                                              client.end()
+                                            })
+
+                                                var flotDashSales1Data = [{
+                                                    data: [
+                                                        ["Янв", 140],
+                                                        ["Фев", 240],
+                                                        ["Мар", 190],
+                                                        ["Апр", 140],
+                                                        ["Май", 180],
+                                                        ["Июн", 320],
+                                                        ["Июл", 270],
+                                                        ["Авг", 180]
+                                                    ],
+                                                    color: "#0088cc"
+                                                }];
+
+                                                // See: assets/javascripts/dashboard/examples.dashboard.js for more settings.
+                                            </script>
+
+                                            <!-- Flot: Sales Porto Drupal -->
+                                            <div class="chart chart-sm" data-sales-rel="Tok" id="flotDashSales2" class="chart-hidden"></div>
+                                            <script>
+                                                var flotDashSales2Data = [{
+                                                    data: [
+                                                        ["Янв", 240],
+                                                        ["Фев", 240],
+                                                        ["Мар", 290],
+                                                        ["Апр", 540],
+                                                        ["Май", 480],
+                                                        ["Июн", 220],
+                                                        ["Июл", 170],
+                                                        ["Авг", 190]
+                                                    ],
+                                                    color: "#2baab1"
+                                                }];
+
+                                                // See: assets/javascripts/dashboard/examples.dashboard.js for more settings.
+                                            </script>
+
+                                            <!-- Flot: Sales Porto Wordpress -->
+                                            <div class="chart chart-sm" data-sales-rel="Amp" id="flotDashSales3" class="chart-hidden"></div>
+                                            <script>
+                                                var flotDashSales3Data = [{
+                                                    data: [
+                                                        ["Янв", 840],
+                                                        ["Фев", 740],
+                                                        ["Мар", 690],
+                                                        ["Апр", 940],
+                                                        ["Май", 1180],
+                                                        ["Июн", 820],
+                                                        ["Июл", 570],
+                                                        ["Авг", 780]
+                                                    ],
+                                                    color: "#734ba9"
+                                                }];
+
+                                                // See: assets/javascripts/dashboard/examples.dashboard.js for more settings.
+                                            </script>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 text-center">
+                                    <h2 class="panel-title mt-md">Процент опроса</h2>
+                                    <div class="liquid-meter-wrapper liquid-meter-sm mt-lg">
+                                        <div class="liquid-meter">
+                                            <meter min="0" max="100" value="35" id="meterSales"></meter>
+                                        </div>
+                                        <div class="liquid-meter-selector" id="meterSalesSel">
+                                            <a href="#" data-val="35" class="active">Опрошено</a>
+                                            <a href="#" data-val="28">Достоверность</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </section>
+            <!-- Vendor -->
+            <script src="assets/vendor/jquery/jquery.js"></script>
+            <script src="assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+            <script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+            <script src="assets/vendor/nanoscroller/nanoscroller.js"></script>
+            <script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+            <script src="assets/vendor/magnific-popup/magnific-popup.js"></script>
+            <script src="assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+
+            <!-- Specific Page Vendor -->
+            <script src="assets/vendor/jquery-ui/js/jquery-ui-1.10.4.custom.js"></script>
+            <script src="assets/vendor/jquery-ui-touch-punch/jquery.ui.touch-punch.js"></script>
+            <script src="assets/vendor/jquery-appear/jquery.appear.js"></script>
+            <script src="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+            <script src="assets/vendor/jquery-easypiechart/jquery.easypiechart.js"></script>
+            <script src="assets/vendor/flot/jquery.flot.js"></script>
+            <script src="assets/vendor/flot-tooltip/jquery.flot.tooltip.js"></script>
+            <script src="assets/vendor/flot/jquery.flot.pie.js"></script>
+            <script src="assets/vendor/flot/jquery.flot.categories.js"></script>
+            <script src="assets/vendor/flot/jquery.flot.resize.js"></script>
+            <script src="assets/vendor/jquery-sparkline/jquery.sparkline.js"></script>
+            <script src="assets/vendor/raphael/raphael.js"></script>
+            <script src="assets/vendor/morris/morris.js"></script>
+            <script src="assets/vendor/gauge/gauge.js"></script>
+            <script src="assets/vendor/snap-svg/snap.svg.js"></script>
+            <script src="assets/vendor/liquid-meter/liquid.meter.js"></script>
+            <script src="assets/vendor/jqvmap/jquery.vmap.js"></script>
+            <script src="assets/vendor/jqvmap/data/jquery.vmap.sampledata.js"></script>
+            <script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
+            <script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.africa.js"></script>
+            <script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.asia.js"></script>
+            <script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.australia.js"></script>
+            <script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.europe.js"></script>
+            <script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.north-america.js"></script>
+            <script src="assets/vendor/jqvmap/maps/continents/jquery.vmap.south-america.js"></script>
+
+            <!-- Theme Base, Components and Settings -->
+            <script src="assets/javascripts/theme.js"></script>
+
+            <!-- Theme Custom -->
+            <script src="assets/javascripts/theme.custom.js"></script>
+
+            <!-- Theme Initialization Files -->
+            <script src="assets/javascripts/theme.init.js"></script>
+
+
+            <!-- Examples -->
+            <script src="assets/javascripts/dashboard/examples.dashboard.js"></script>
+            <script src="assets/javascripts/ui-elements/examples.charts.js"></script>
+</body>
+
+</html>
